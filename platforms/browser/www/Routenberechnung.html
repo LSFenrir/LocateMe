@@ -35,9 +35,31 @@
 </nav>
 <!--#################################################################################################################### Kartencontainer mit Karte !-->
 <div id="map_container">
-    <div id="map">
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript">
+        var map;
+        document.addEventListener("deviceready", function() {
+            var div = document.getElementById("map_canvas");
 
-    </div>
+            // Initialize the map view
+            map = plugin.google.maps.Map.getMap(div);
+
+            // Wait until the map is ready status.
+            map.addEventListener(plugin.google.maps.event.MAP_READY, onMapReady);
+        }, false);
+
+        function onMapReady() {
+            var button = document.getElementById("button");
+            button.addEventListener("click", onBtnClicked, false);
+        }
+
+        function onBtnClicked() {
+            map.showDialog();
+        }
+    </script>
+    <h3>PhoneGap-GoogleMaps-Plugin</h3>
+    <div style="width:400px;height:400px" id="map_canvas"></div>
+    <button id="button">Full Screen</button>
 </div>
 <!--#################################################################################################################### Such- bzw- Optionsleiste !-->
 <div id="Suchleiste">Leiste</div>
