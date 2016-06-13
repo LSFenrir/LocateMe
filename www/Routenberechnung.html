@@ -35,32 +35,20 @@
 </nav>
 <!--#################################################################################################################### Kartencontainer mit Karte !-->
 <div id="map_container">
+
+    <div class="app">
+        <h1>PhoneGap</h1>
+        <div id="deviceready" class="blink">
+            <p class="event listening">Connecting to Device</p>
+            <p class="event received">Device is Ready</p>
+        </div>
+    </div>
     <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
-        var map;
-        document.addEventListener("deviceready", ready());
-        function ready() {
-            var div = document.getElementById("map_canvas");
-
-            // Initialize the map view
-            map = plugin.google.maps.Map.getMap(div);
-
-            // Wait until the map is ready status.
-            map.addEventListener(plugin.google.maps.event.MAP_READY, onMapReady);
-        }
-
-        function onMapReady() {
-            var button = document.getElementById("button");
-            button.addEventListener("click", onBtnClicked, false);
-        }
-
-        function onBtnClicked() {
-            map.showDialog();
-        }
+        app.initialize();
     </script>
-    <h3>PhoneGap-GoogleMaps-Plugin</h3>
-    <div style="width:400px;height:400px" id="map_canvas" onload="ready()"></div>
-    <button id="button">Full Screen</button>
+
 </div>
 <!--#################################################################################################################### Such- bzw- Optionsleiste !-->
 <div id="Suchleiste">Leiste!</div>
