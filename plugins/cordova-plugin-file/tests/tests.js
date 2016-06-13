@@ -3493,13 +3493,13 @@ exports.defineAutoTests = function () {
                     }, transfer);
                 }
                 it("file.spec.138 copyTo: content", function(done) {
-                    testContentCopy('content://org.apache.cordova.file.testprovider/www/index.html', done);
+                    testContentCopy('content://org.apache.cordova.file.testprovider/www/index_backup.html', done);
                 });
                 it("file.spec.139 copyTo: content /w space and query", function(done) {
                     testContentCopy('content://org.apache.cordova.file.testprovider/?name=foo%20bar&realPath=%2Fwww%2Findex.html', done);
                 });
                 it("file.spec.140 delete: content should fail", function(done) {
-                    resolveLocalFileSystemURL('content://org.apache.cordova.file.testprovider/www/index.html', function(entry) {
+                    resolveLocalFileSystemURL('content://org.apache.cordova.file.testprovider/www/index_backup.html', function(entry) {
                         entry.remove(failed.bind(null, done, 'expected delete to fail'), done);
                     }, failed.bind(null, done, 'resolveLocalFileSystemURL failed for content provider'));
                 });
@@ -3561,7 +3561,7 @@ exports.defineAutoTests = function () {
                         deleteEntry(entry.name, done);
                     },
                     transfer = function () {
-                        resolveLocalFileSystemURL('file:///android_asset/www/index.html', function(entry) {
+                        resolveLocalFileSystemURL('file:///android_asset/www/index_backup.html', function(entry) {
                             expect(entry.filesystem.name).toEqual('assets');
                             entry.copyTo(temp_root, file2, validateFile, failed.bind(null, done, 'entry.copyTo - Error copying file: ' + entry.toURL() + ' to TEMPORAL root as: ' + file2));
                         }, failed.bind(null, done, 'resolveLocalFileSystemURL failed for assets'));
