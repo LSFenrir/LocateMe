@@ -42,6 +42,7 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
     <link rel="stylesheet" type="text/css" href="www/css/csshake.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
 
 
     <title>Hello World</title>
@@ -76,10 +77,20 @@
 
 <body>
 
-<img src="www/img/Logo_HHN.png">
 
-<p class="shake-slow shake-constant">Laden. Bitte warten. x_X</p>
 
+<div class="app">
+    <h1>Bitte warten.</h1>
+    <div id="deviceready" >
+        <p class="event listening"><img class="shake-slow shake-constant" src="www/img/Logo_HHN.png"></p>
+        <p class="event received"><img class="" src="www/img/Logo_HHN.png"></p>
+    </div>
+</div>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+    app.initialize();
+</script>
 </body>
 
 </html>
