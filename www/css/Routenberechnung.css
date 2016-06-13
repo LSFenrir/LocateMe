@@ -6,7 +6,7 @@ div#map_container{
     left:0;
     z-index:  1;
     position: fixed;
-    background-color: grey;
+    background-color: white;
     padding:50px 0 50px 0 ;
 }
 div#map_container div#map{

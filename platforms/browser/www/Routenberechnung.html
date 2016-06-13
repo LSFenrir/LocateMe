@@ -38,7 +38,9 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript">
         var map;
-        document.addEventListener("deviceready", function() {
+        document.addEventListener("deviceready", ready());
+        function ready() {
+            alert("Ready");
             var div = document.getElementById("map_canvas");
 
             // Initialize the map view
@@ -46,7 +48,7 @@
 
             // Wait until the map is ready status.
             map.addEventListener(plugin.google.maps.event.MAP_READY, onMapReady);
-        }, false);
+        }
 
         function onMapReady() {
             var button = document.getElementById("button");
@@ -58,7 +60,7 @@
         }
     </script>
     <h3>PhoneGap-GoogleMaps-Plugin</h3>
-    <div style="width:400px;height:400px" id="map_canvas"></div>
+    <div style="width:400px;height:400px" id="map_canvas" onload="ready()"></div>
     <button id="button">Full Screen</button>
 </div>
 <!--#################################################################################################################### Such- bzw- Optionsleiste !-->
@@ -66,7 +68,7 @@
 
 
 <!--#################################################################################################################### Scripte !-->
-<script src="../platforms/browser/js/GoogleAPI.jquery.min.js"></script>
+<script src="js/GoogleAPI.jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="scripts.js"></script>
 
