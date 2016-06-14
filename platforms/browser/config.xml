@@ -28,7 +28,7 @@
     <plugin name="cordova-plugin-geolocation" source="npm" spec="~2.1.0"/>
 
 
-    <gap:plugin name="plugin.google.maps" source="plugins.cordova.io" version="~1.2.4">
+    <gap:plugin name="plugin.google.maps"  version="~1.2.4">
             <param name="API_KEY_FOR_ANDROID" value="AIzaSyAwDro7cROiSJKJspyvZPYCdlhnWM8jsys" />
             <param name="API_KEY_FOR_IOS" value="AIzaSyDSnDnMrRJyQe2tM0NjnsPp4RipNh4ZLiU" />
     </gap:plugin>
