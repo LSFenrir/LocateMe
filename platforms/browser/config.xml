@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets"
+        xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0"
+        xmlns:vs="http://java.sun.com/JSP/Page">
     <name>Hello World</name>
     <description>
         Hello World sample application that responds to the deviceready event.
@@ -21,6 +23,11 @@
 
 
     <plugin name="cordova-plugin-vibration"           source="npm" spec="~2.1.0" />
+
+    <plugin name="plugin.google.maps">
+        <param name="API_KEY_FOR_ANDROID" value="AIzaSyAwDro7cROiSJKJspyvZPYCdlhnWM8jsys" />
+        <param name="API_KEY_FOR_IOS" value="AIzaSyDSnDnMrRJyQe2tM0NjnsPp4RipNh4ZLiU" />
+    </plugin>
 </widget>
 
 
