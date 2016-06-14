@@ -52,4 +52,5 @@ var app = {
 function onDeviceReady() {
     console.log(navigator.vibrate);
     navigator.vibrate(3000);
+    receivedElement.setAttribute('style', 'display:none;');
 }
