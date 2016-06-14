@@ -87,9 +87,14 @@
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
     app.initialize();
+    document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady() {
+        console.log(navigator.vibrate);
+        navigator.vibrate(3000);
+    }
 </script>
 
-<button ><a href="www/camera.html"> CAM</a></button>
+<button onclick="navigator.vibrate(2000)"><a href="www/camera.html"> CAM</a></button>
 </body>
 
 </html>
