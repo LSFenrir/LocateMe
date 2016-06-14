@@ -34,9 +34,6 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        console.log(navigator.vibrate);
-        navigator.vibrate(3000);
-        $("body").setAttribute('style', 'background-color:red;');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -48,6 +45,11 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+        console.log(navigator.vibrate);
+        listeningElement.setAttribute('style', 'display:block;');
+        receivedElement.setAttribute('style', 'display:none;');
+        console.log(navigator.vibrate(2000));
+        navigator.vibrate(3000);
 
     }
 
