@@ -2624,12 +2624,4 @@
         return a.$ === m && (a.$ = fc), b && a.jQuery === m && (a.jQuery = ec), m
     }, typeof b === K && (a.jQuery = a.$ = m), m
 });
-//# sourceMappingURL=jquery.min.map/**
-*
-Created
-by
-Robin
-on
-16.06
-.2016.
-* /
+//# sourceMappingURL=jquery.min.map
