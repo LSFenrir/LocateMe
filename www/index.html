@@ -89,7 +89,9 @@
 <div class="app">
     <h1>Apache Cordova</h1>
     <div id="deviceready" class="blink">
-        <p class="event listening">Connecting to Device</p>
+        <p class="event listening">
+        <p class="shake-slow shake-constant">Laden. Bitte warten.</p>
+        </p>
         <p class="event received">Device is Ready</p>
     </div>
 </div>
@@ -98,5 +100,27 @@
 <script type="text/javascript">
     app.initialize();
 </script>
+
+<style>
+    body {
+        background-color: #bfbfbd;
+    }
+
+
+    p {
+        position: absolute;
+        text-align: center;
+        color: #fff;
+        background-attachment: fixed;
+        font-family: 'Segoe UI', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        width: 100%;
+        font-size: 16px;
+        text-transform: uppercase;
+        bottom:10%;
+    }
+
+
+</style>
 </body>
 </html>
