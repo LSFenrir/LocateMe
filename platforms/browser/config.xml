@@ -14,6 +14,11 @@
     <allow-intent href="geo:*" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
-    
+
+
+    <param name="API_KEY_FOR_ANDROID" value="YOUR_API_KEY_IS_HERE" />
+    <param name="API_KEY_FOR_IOS" value="YOUR_API_KEY_IS_HERE" />
+
     <plugin name="plugin.google.maps.menusito" spec="1.2.5" source="pgb" />
+    <param name="API_KEY_FOR_ANDROID" value="AIzaSyCKPfjadTJVVCSM8W4MhyYVF-FiB5seC4g" />
 </widget>
